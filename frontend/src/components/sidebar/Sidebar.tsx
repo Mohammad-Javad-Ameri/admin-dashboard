@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
-import { SidebarProps } from "./Sidebar.types";
 import { NavLink } from "react-router-dom";
 import { items } from "./SIdebarItems";
 import { FiPower } from "react-icons/fi";
-import Logo from "../../assets/Img/Logo-2.png";
-import Button from "../form/button/Button";
-import "./Sidebar.scss";
+import Logo from "../../Assets/Img/Logo-2.png";
+import Button from "../Form/Button/Button";
+import "./Sidebar.css";
+
+export type SidebarProps = {
+  className?: string;
+};
 
 const Sidebar = ({ className }: SidebarProps) => {
   const HandleLogOut = () => {

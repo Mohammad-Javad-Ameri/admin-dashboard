@@ -1,3 +1,3 @@
 export type SidebarProps = {
-  className?: string;
-};
+    className?:string
+}
