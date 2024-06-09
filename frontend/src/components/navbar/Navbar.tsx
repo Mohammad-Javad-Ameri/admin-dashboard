@@ -1,6 +1,7 @@
 import React, { useState, useEffect, MouseEvent } from "react";
 import { FiBell, FiMenu } from "react-icons/fi";
-import Profile from "../../assets/Img/Profile.png";
+import Profile from "../../Assets/Img/Profile.png";
+
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState<Boolean>(false);
   const [showNotifications, setShowNotifications] = useState<Boolean>(false);
