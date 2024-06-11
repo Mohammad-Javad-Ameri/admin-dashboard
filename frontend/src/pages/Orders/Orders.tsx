@@ -96,16 +96,7 @@ const Orders = () => {
               className="w-full"
             />
             {/* <Select options={ordersStatus} title="Status" onChange={() => {}} className='w-full'  /> */}
-            <a href="https://admin-dashboard-backend-nine.vercel.app/api/v1/csv/download">
-              <Button
-                title="Download all Orders"
-                onClick={() => {}}
-                textSize="sm"
-                size="lg"
-                icon={<FiDownloadCloud />}
-                type="primary"
-              />
-            </a>
+
             <Button
               title="Clear Search"
               onClick={getAllOrders}

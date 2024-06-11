@@ -17,7 +17,6 @@ const ProductDetails = () => {
   const [OpenEditComponent, setOpenEditComponent] = useState<Boolean>(false);
   const [AnimateEditProduct, setAnimateEditProduct] = useState<Boolean>(false);
   const navigate = useNavigate();
-  console.log(navigate);
   const { id } = useParams();
   useEffect(() => {
     if (product.products.length) {

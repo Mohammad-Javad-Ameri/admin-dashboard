@@ -2,7 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import axios from "axios";
 import reportWebVitals from "./reportWebVitals";
+
+axios.defaults.baseURL = "https://wd-project-7r4n.onrender.com/api/v1/";
+
+axios.defaults.headers = {
+  Authorization: `Bearer ${localStorage.getItem("AccessToken")}`,
+} as any;
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

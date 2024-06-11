@@ -49,9 +49,7 @@ const Invoice = () => {
                   </div>
                   <div className="flex flex-col sm:items-end flex-wrap  w-full sm:w-1/2 items-start">
                     <img src={Logo} alt="E-shop" width="110" />
-                    <p className="text-sm text-gray-500  mt-2">
-                      E-shop,Cairo,Egypt
-                    </p>
+                    <p className="text-sm text-gray-500  mt-2">E-shop</p>
                   </div>
                 </div>
                 <div className="flex justify-center sm:justify-between flex-wrap my-6">
@@ -87,29 +85,22 @@ const Invoice = () => {
                   </div>
                   <div className="w-full md:w-1/4">
                     <h2 className="TotalPrice_Title">SHIPPING COST</h2>
-                    <span className="TotalPrice_subtitle">40 EG</span>
+                    <span className="TotalPrice_subtitle">40 $</span>
                   </div>
                   <div className="w-full md:w-1/4">
                     <h2 className="TotalPrice_Title">DISCOUNT</h2>
-                    <span className="TotalPrice_subtitle">0 EG</span>
+                    <span className="TotalPrice_subtitle">0 $</span>
                   </div>
                   <div className="w-full md:w-1/4">
                     <h2 className="TotalPrice_Title">TOTAL PRICE</h2>
                     <span className="TotalPrice_subtitle">
-                      {OrderDetails.totalPrice} EG
+                      {OrderDetails.totalPrice} $
                     </span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="flex justify-between flex-wrap md:flex-nowrap">
-              <a
-                className="btn btn-primary items-center w-full md:w-1/2 "
-                href={`https://admin-dashboard-backend-nine.vercel.app/api/v1/invoice/pdf/${OrderDetails._id}`}
-              >
-                <FiDownloadCloud />
-                <span className="ml-2">Download Invoice</span>
-              </a>
               <ReactToPrint
                 trigger={() => {
                   return (

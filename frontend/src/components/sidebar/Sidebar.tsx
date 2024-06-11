@@ -4,6 +4,9 @@ import { items } from "./SIdebarItems";
 import { FiPower } from "react-icons/fi";
 import Logo from "../../Assets/Img/Logo-2.png";
 import Button from "../Form/Button/Button";
+import { useDashboard } from "../../context/AppContext";
+import { OpenMenuAction } from "../../context/Actions/AuthActions/AuthActions";
+import { LogoutUser } from "../../context/Actions/AuthActions/AuthActions";
 import "./Sidebar.css";
 
 export type SidebarProps = {
@@ -11,12 +14,13 @@ export type SidebarProps = {
 };
 
 const Sidebar = ({ className }: SidebarProps) => {
+  const { authDispatch, auth }: any = useDashboard();
   const HandleLogOut = () => {
-    // authDispatch(LogoutUser());
+    authDispatch(LogoutUser());
   };
   const HandleOpenMenu = () => {
     setTimeout(() => {
-      //   authDispatch(OpenMenuAction(false));
+      authDispatch(OpenMenuAction(false));
     }, 50);
   };
 

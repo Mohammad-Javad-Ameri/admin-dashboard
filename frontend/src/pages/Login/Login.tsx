@@ -12,17 +12,20 @@ import { useDashboard } from "../../context/AppContext";
 import { LoginUser } from "../../../src/context/Actions/AuthActions/AuthActions";
 const Login = () => {
   const { authDispatch }: any = useDashboard();
+  console.log(authDispatch);
+  console.log(initLogin);
+  console.log(LoginSchema);
   return (
-    <section className="Login">
+    <section className="bg-gray-50 flex justify-center items-center h-screen w-screen">
       <div className="content">
-        <div className="content_inner">
+        <div className="flex flex-wrap md:flex-nowrap md:h-[400px] max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl">
           <img
             src={LoginImg}
             alt="LoginImage"
-            className="content_inner_image"
+            className="w-full md:w-1/2 object-cover h-[200px] md:h-auto"
           />
-          <div className="content_inner_form">
-            <h2 className="PageTitle">Login</h2>
+          <div className="w-full md:w-1/2 sm:p-10 p-2">
+            <h2 className="text-2xl mb-10">Login</h2>
             <Formik
               initialValues={initLogin}
               validationSchema={LoginSchema}
@@ -43,13 +46,13 @@ const Login = () => {
               }}
             >
               {({ errors, touched, values, isSubmitting }) => (
-                <Form>
+                <Form className="flex flex-col items-start max-w-full gap-5 ">
                   <Field name="email">
                     {({ field, meta }: any) => (
                       <Input
                         type="email"
                         placeHolder="Email"
-                        className="w-full "
+                        className="border p-3 md:w-[20vw] rounded-full"
                         field={field}
                         error={meta.touched && meta.error && meta.error}
                       />
@@ -60,7 +63,7 @@ const Login = () => {
                       <Input
                         type="password"
                         placeHolder="Password"
-                        className="w-full "
+                        className="border p-3 md:w-[20vw] rounded-full"
                         field={field}
                         error={meta.touched && meta.error && meta.error}
                       />
@@ -69,7 +72,7 @@ const Login = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn btn-primary w-full"
+                    className=" bg-primary text-white p-3 rounded-full mt-5 w-full m-0"
                   >
                     Login
                   </button>
