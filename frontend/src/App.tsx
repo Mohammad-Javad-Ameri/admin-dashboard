@@ -14,8 +14,8 @@ import Invoice from "./pages/Invoice/Invoice";
 import PublicRoute from "./routes/PublicRoute";
 import Login from "./pages/Login/Login";
 import NotFound from "./pages/404/NotFound";
-import "react-toastify/dist/ReactToastify.css";
-import "./toast.css";
+import "react-toastify/dist/ReactToastify.min.css";
+
 function App() {
   return (
     <div>
