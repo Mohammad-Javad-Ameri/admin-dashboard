@@ -92,7 +92,7 @@ const Categories = () => {
           <div className="Categories_filter">
             <input
               type="text"
-              className="Field_input"
+              className="w-full p-3 outline-none border border-gray-300 rounded-lg"
               placeholder="Search By Category Name"
               onChange={(e) => HandleSearch({ title: e.target.value })}
             />

@@ -85,7 +85,7 @@ const Orders = () => {
               type="text"
               placeholder="Search By order ID"
               value={Search.orderID}
-              className="Field_input"
+              className="w-full p-3 outline-none border border-gray-300 rounded-lg"
               onChange={(e) => HandleSearch({ orderID: e.target.value })}
             />
             <Select

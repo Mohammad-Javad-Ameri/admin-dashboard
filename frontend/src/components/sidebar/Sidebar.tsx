@@ -33,7 +33,9 @@ const Sidebar = ({ className }: SidebarProps) => {
   }, []);
 
   return (
-    <aside className={`${className} ${false ? "MenuOpened" : "MenuClosed"}`}>
+    <aside
+      className={`${className} ${auth.OpenMenu ? "MenuOpened" : "MenuClosed"}`}
+    >
       <div onClick={(e) => e.stopPropagation()}>
         <img
           src={Logo}

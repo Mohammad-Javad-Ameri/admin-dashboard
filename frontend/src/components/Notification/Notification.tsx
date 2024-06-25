@@ -10,18 +10,22 @@ const Notification = ({
   actions,
 }: NotificationProps) => {
   return (
-    <div className="notification">
-      <img className="notification_img" src={img} alt="NotificationImage" />
-      <div className="notification_content">
-        <h4 className="notification_content_title">{title}</h4>
-        <div className="notification_content_body">
+    <div className="flex w-full items-center mb-4">
+      <img
+        className="w-[30px] h-[30px]  mr-3 object-cover rounded-full"
+        src={img}
+        alt="NotificationImage"
+      />
+      <div className="flex flex-col w-full">
+        <h4 className="font-medium text-gray-500 text-[13px]">{title}</h4>
+        <div className="flex text-[11px] items-center">
           <p
-            className={`notification_content_body_status notification-${status_type}`}
+            className={`px-2 text-xs font-medium leading-5 rounded-full text-red-500 bg-red-100 dark:text-red-100 dark:bg-red-800 mr-2-${status_type}`}
           >
             {status}
           </p>
-          <p className="notification_content_body_date">
-            Dec 12 2021 - 12:40PM
+          <p className="flex text-[11px] items-center">
+            june 12 2024 - 12:40PM
           </p>
         </div>
       </div>

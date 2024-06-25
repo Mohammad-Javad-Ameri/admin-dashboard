@@ -33,9 +33,9 @@ const Invoice = () => {
       <div className="w-full">
         <Navbar />
         {OrderDetails ? (
-          <div className="content">
+          <div className="content" ref={PrintRef}>
             <h2 className="PageTitle">Invoice</h2>
-            <div ref={PrintRef}>
+            <div>
               <div className="Invoice_content ">
                 <div className="flex justify-start md:justify-between flex-wrap  ">
                   <div className="text-left mb-4 sm:mb-0 w-full sm:w-1/2">
