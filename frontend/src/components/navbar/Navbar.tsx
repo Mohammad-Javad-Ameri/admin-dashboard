@@ -1,10 +1,14 @@
 import React, { useState, useEffect, MouseEvent } from "react";
 import { FiBell, FiMenu } from "react-icons/fi";
 import Profile from "../../Assets/Img/Profile.png";
+import Notifications from "../Notification/Notifications";
+import { OpenMenuAction } from "../../context/Actions/AuthActions/AuthActions";
+import { useDashboard } from "../../context/AppContext";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState<Boolean>(false);
   const [showNotifications, setShowNotifications] = useState<Boolean>(false);
+  const { authDispatch }: any = useDashboard();
 
   useEffect(() => {
     // to close notifications menu when click on anywhere in window
@@ -23,7 +27,7 @@ const Navbar = () => {
 
   const HandleOpenMenu = (e: any) => {
     e.stopPropagation();
-    // authDispatch(OpenMenuAction(true));
+    authDispatch(OpenMenuAction(true));
   };
 
   const notifcations = [
@@ -63,9 +67,9 @@ const Navbar = () => {
 
   return (
     <nav className="px-6 py-4 w-full bg-white sticky top-0">
-      {/* {showNotifications && <Notifications data={notifcations} />} */}
+      {showNotifications && <Notifications data={notifcations} />}
       <div className="flex items-center justify-between">
-        {isMobile && <FiMenu className="md:hidden" onClick={HandleOpenMenu} />}
+        {<FiMenu className="md:hidden" onClick={HandleOpenMenu} />}
         <div className="flex items-center justify-end w-full">
           <div
             className="relative cursor-pointer"

@@ -57,7 +57,7 @@ const Users = () => {
             <input
               type="text"
               placeholder="Search By Email"
-              className="Field_input w-full"
+              className="w-full p-3 outline-none border border-gray-300 rounded-lg w-full"
               onChange={(e) => SearchUser({ email: e.target.value })}
             />
           </div>

@@ -18,7 +18,7 @@ function Input({
         <input
           type={type}
           placeholder={placeHolder}
-          className={`Field_input Field_input_in-${
+          className={`w-full p-3 outline-none border border-gray-300 rounded-lg Field_input_in-${
             error && "error"
           } ${className}`}
           {...field}

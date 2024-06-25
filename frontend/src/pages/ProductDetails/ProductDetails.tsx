@@ -51,15 +51,15 @@ const ProductDetails = () => {
               />
             )}
             <h2 className="PageTitle">Product Details </h2>
-            <div className="ProductDetails_content">
-              <div className="ProductDetails_content_image">
+            <div className="flex flex-wrap md:flex-nowrap gap-10">
+              <div className="w-full md:w-1/2">
                 <img
                   src={productData?.mainImage}
                   alt={productData?.title}
                   width="100%"
                 />
               </div>
-              <div className="ProductDetails_content_desc">
+              <div className="capitalize  text-lg md:text-xl lg:text-2xl font-semibold font-serif">
                 <div className="ProductDetails_content_desc_status mb-3">
                   <p className="text-sm text-grey-500 font-semibold">
                     Status:{" "}
@@ -79,15 +79,15 @@ const ProductDetails = () => {
                 <h2 className="ProductDetails_content_desc_title">
                   {productData?.title}
                 </h2>
-                <p className="ProductDetails_content_desc_sku">
+                <p className=" uppercase font-serif font-medium text-gray-500 text-sm">
                   SKU: <span>{productData?.sku}</span>
                 </p>
-                <p className="ProductDetails_content_desc_price">
+                <p className="font-bold text-2xl mt-6">
                   ${productData?.salePrice}
                 </p>
-                <div className="ProductDetails_content_desc_quantity">
+                <div className="flex items-center mt-2">
                   <span
-                    className={`status ${
+                    className={`py-[2px] px-3 rounded-full font-bold text-xs ${
                       productData && productData.Stock <= 0
                         ? "bg-red-200 text-red-500"
                         : "bg-green-200 text-green-500"
@@ -97,11 +97,11 @@ const ProductDetails = () => {
                       ? "in Stock"
                       : "out Of Stouk"}
                   </span>
-                  <span className="quantity">
+                  <span className="text-sm text-gray-500 font-medium pl-4">
                     Quantity: {productData?.Stock}
                   </span>
                 </div>
-                <p className="ProductDetails_content_desc_text">
+                <p className="py-4 text-sm leading-6 text-gray-500 dark:text-gray-400 md:leading-7">
                   {productData?.description}
                 </p>
                 <div className="ProductDetails_content_desc_category">
