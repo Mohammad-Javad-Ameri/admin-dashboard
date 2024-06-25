@@ -26,6 +26,7 @@ function Products() {
     categoryDispatch,
     authDispatch,
   }: any = useDashboard();
+
   const [OpenAddProduct, setOpenAddProduct] = useState<Boolean>(false);
   const [AnimateAddProduct, setAnimateAddProduct] = useState<Boolean>(false);
   const [Search, setSear5ch] = useState<object>({});
