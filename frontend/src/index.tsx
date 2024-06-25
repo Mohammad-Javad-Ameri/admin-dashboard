@@ -5,7 +5,7 @@ import App from "./App";
 import axios from "axios";
 import reportWebVitals from "./reportWebVitals";
 
-axios.defaults.baseURL = "http://localhost:8080/api/v1";
+axios.defaults.baseURL = "https://wd-project-7r4n.onrender.com/api/v1/";
 
 axios.defaults.headers = {
   Authorization: `Bearer ${localStorage.getItem("AccessToken")}`,
