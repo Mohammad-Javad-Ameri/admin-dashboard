@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { items } from "./SIdebarItems";
 import { FiPower } from "react-icons/fi";
 import Logo from "../../Assets/Img/Logo-2.png";
-import Button from "../Form/Button/Button";
+import Button from "../Form/button/Button";
 import { useDashboard } from "../../context/AppContext";
 import { OpenMenuAction } from "../../context/Actions/AuthActions/AuthActions";
 import { LogoutUser } from "../../context/Actions/AuthActions/AuthActions";

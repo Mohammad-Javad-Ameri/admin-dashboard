@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import Button from "../../components/Form/Button/Button";
+import Button from "../../components/Form/button/Button";
 import Select from "../../components/Form/select/Select";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";

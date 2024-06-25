@@ -1,7 +1,7 @@
-import Button from "../../components/Form/Button/Button";
+import Button from "../../components/Form/button/Button";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import { FiDownloadCloud, FiXCircle } from "react-icons/fi";
+import { FiXCircle } from "react-icons/fi";
 import "./Orders.css";
 import OrdersTable from "../../components/Tables/Orders/OrdersTable";
 import { useEffect, useState } from "react";
