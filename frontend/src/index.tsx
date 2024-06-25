@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import axios from "axios";
 import reportWebVitals from "./reportWebVitals";
+import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.min.css";
 
 axios.defaults.baseURL = "https://wd-project-7r4n.onrender.com/api/v1/";
 
