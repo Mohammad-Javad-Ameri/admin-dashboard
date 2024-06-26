@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-import "react-toastify/dist/ReactToastify.css" body {
+
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
