@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import Button from "../../components/Form/button/Button";
+
 import Select from "../../components/Form/select/Select";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -101,20 +101,6 @@ const Categories = () => {
               title="Category"
               onChange={(e) => HandleSearch({ _id: e.target.value })}
               className="w-full"
-            />
-            <Button
-              type="primary"
-              size="lg"
-              title="Add Category"
-              className="mr-auto"
-              onClick={(e) =>
-                HandleOpenComponent(
-                  e,
-                  setOpenAddCategory,
-                  setAnimateAddPCategory
-                )
-              }
-              icon={<FiXCircle />}
             />
           </div>
           {category.isLoading ? <Spinner /> : <CategoryTable data={category} />}

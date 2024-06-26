@@ -28,13 +28,11 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/products" element={<Products />} />
               <Route path="/category" element={<Categories />} />
-              {/* <Route path='/togar' element={<Togar />} /> */}
               <Route path="/users" element={<Users />} />
               <Route path="/orders" element={<Orders />} />
               <Route path="/products/:id" element={<ProductDetails />} />
               <Route path="/orders/invoice/:id" element={<Invoice />} />
             </Route>
-            {/* <Route path='/coupons' element={<Coupons />} /> */}
             <Route element={<PublicRoute />}>
               <Route path="/login" element={<Login />} />
             </Route>

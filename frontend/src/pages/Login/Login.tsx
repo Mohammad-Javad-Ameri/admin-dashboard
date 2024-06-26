@@ -12,9 +12,6 @@ import { useDashboard } from "../../context/AppContext";
 import { LoginUser } from "../../../src/context/Actions/AuthActions/AuthActions";
 const Login = () => {
   const { authDispatch }: any = useDashboard();
-  console.log(authDispatch);
-  console.log(initLogin);
-  console.log(LoginSchema);
   return (
     <section className="bg-gray-50 flex justify-center items-center h-screen w-screen">
       <div className="content">
