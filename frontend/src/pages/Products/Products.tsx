@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Button from "../../components/Form/button/Button";
+
 import Select from "../../components/Form/select/Select";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -120,15 +120,6 @@ function Products() {
               title="Price"
               onChange={(e) => HandleSearch({ price: e.target.value })}
               className="w-full"
-            />
-            <Button
-              type="primary"
-              size="lg"
-              onClick={(e) =>
-                HandleOpenComponent(e, setOpenAddProduct, setAnimateAddProduct)
-              }
-              title="Add Product"
-              icon={<FiXCircle />}
             />
           </div>
           {product.isLoading ? <Spinner /> : <ProductTable data={product} />}
